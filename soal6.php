@@ -21,6 +21,6 @@ $tembok_untuk_dicat = $area_ruangan - ($area_pintu + $area_jendela);
 $cat_per_mtg = 25000; 
 $total_biaya = $tembok_untuk_dicat * $cat_per_mtg; 
 
-echo "Area of the walls to be painted: " . $tembok_untuk_dicat . " sqm<br>";
-echo "Overall cost for painting the walls: IDR " . number_format($total_biaya, 2);
+echo "area yang akan di cat: " . $tembok_untuk_dicat . " sqm<br>";
+echo "seluruh biaya yang digunakan untuk cat tembok : IDR " . number_format($total_biaya, 2);
 ?>
