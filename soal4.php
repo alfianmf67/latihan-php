@@ -74,7 +74,6 @@
                             <td></td>
                             <td>
                                 <input type="submit" name="submit" value="Submit" />
-                                <input type="reset" name="reset" value="Clear!" />
                             </td>
                         </tr>
                     </table>

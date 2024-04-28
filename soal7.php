@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Amount Loop Program</title>
+    <title>menghitung kepastian</title>
 </head>
 <body>
-    <h2>Enter Name, Amount, and Action:</h2>
+
     <form method="post">
-        Name: <input type="text" name="name"><br><br>
-        Amount: <input type="number" name="amount"><br><br>
-        Action:
-        <input type="radio" name="action" value="step"> Step
-        <input type="radio" name="action" value="jump"> Jump<br><br>
+        <label for="name">Nama:</label>
+        <input type="text" name="name" id="name" required><br><br>
+        
+        <label for="j_aksi">Jumlah j_aksi:</label>
+        <input type="number" name="j_aksi" id="j_aksi" required><br><br>
+        
+        <input type="radio" name="aksi" value="melangkah" checked> melangkah
+        <input type="radio" name="aksi" value="melompat"> melompat<br><br>
+        
         <input type="submit" name="submit" value="Submit">
     </form>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST['name'];
-        $amount = $_POST['amount'];
-        $action = $_POST['action'];
-
-        echo "<h2>Output:</h2>";
-
-        if ($action == 'step') {
-            for ($i = 1; $i <= $amount; $i++) {
-                echo "$name - Step $i<br>";
+        $j_aksi = $_POST['j_aksi'];
+        $aksi = $_POST['aksi'];
+        
+        $currentj_aksi = 0;
+        
+        while (true) {
+            if ($aksi == 'melangkah') {
+                $currentj_aksi++;
+            } else if ($aksi == 'melompat') {
+                $currentj_aksi ++;
             }
-        } elseif ($action == 'jump') {
-            $i = 1;
-            while ($i <= $amount) {
-                echo "$name - Jump $i<br>";
-                $i += 2; // Jump by 2
+            
+            echo "$name : $aksi - $currentj_aksi x <br>";
+            
+            if ($currentj_aksi == $j_aksi) {
+                echo "$name berhenti $aksi karena lelah menunggu mu tanpa kabar akwokakwokakwok<br>";
+                break;
             }
         }
     }

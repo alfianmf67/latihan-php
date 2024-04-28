@@ -1,5 +1,5 @@
 <?php
-// Tentukan jarak antar kota dalam kilometer
+// jarak antar kota dalam kilometer
 $jarak = [
     'A-B' => 45,
     'B-C' => 51,
@@ -8,18 +8,17 @@ $jarak = [
     'E-F' => 93,
 ];
 
-// Tentukan tingkat konsumsi bahan bakar dalam liter per kilometer
+// tingkat konsumsi bahan bakar dalam liter per kilometer
 $konsumsiBahanBakar= 1/9;
 
-// Hitung bahan bakar yang dibutuhkan untuk melakukan perjalanan dari kota A ke F
 $totaljarakAF = $jarak['A-B'] + $jarak['B-C'] + $jarak['C-D'] + $jarak['D-E'] + $jarak['E-F'];
 $bahanBakarAF = $totaljarakAF * $konsumsiBahanBakar;
 
-// Hitung bahan bakar yang dibutuhkan untuk melakukan perjalanan dari kota B ke E
+
 $jarakBE = $jarak['B-C'] + $jarak['C-D'] + $jarak['D-E'];
 $bahanBakarBE = $jarakBE * $konsumsiBahanBakar;
 
-// Hitung bahan bakar yang dibutuhkan untuk melakukan perjalanan dari kota A ke F dan kembali ke kota B
+
 $totaljarakAFB = $totaljarakAF + $jarak['E-F'] + $jarak['D-E'] + $jarak['C-D'] + $jarak['B-C'];
 $KebutuhanBahanBakarAFB = $totaljarakAFB * $konsumsiBahanBakar;
 ?>

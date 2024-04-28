@@ -4,7 +4,7 @@
     <title>Form Tiket Pesawat</title>
 </head>
 <body>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form method="post" aksi="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <label for="nama">Nama:</label><br>
         <input type="text" id="nama" name="nama" required><br>
         <label for="alamat">Alamat:</label><br>

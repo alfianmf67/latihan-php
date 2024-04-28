@@ -13,10 +13,10 @@ $margarineQty = 2; // paket
 $telurJumlah = 0.5; //Kg
 $minyakQty = 2; // Liter
 
-// Tentukan jumlah donat yang diproduksi
+// jumlah donat yang diproduksi
 $jumlahDonat = 50;
 
-// Tentukan harga jual setiap donat
+// harga jual setiap donat
 $hargajualPerDonut = 2000; // Rp
 
 // Hitung total biaya bahan

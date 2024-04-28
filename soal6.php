@@ -1,26 +1,26 @@
 <?php
-// Dimensions of the room
-$room_length = 3; // in meters
-$room_width = 4; // in meters
+
+$panjang_ruangan = 3; 
+$lebar_ruangan = 4; 
 
 // Dimensions of the door
-$door_length = 1; // in meters
-$door_width = 2; // in meters
+$panjang_pintu = 1; 
+$lebar_pintu = 2; 
 
-// Dimensions of the window
-$window_length = 1; // in meters
-$window_width = 1; // in meters
 
-// Calculate the area of the walls to be painted
-$room_area = 2 * ($room_length + $room_width); // Total area of all walls
-$door_area = $door_length * $door_width; // Area of the door
-$window_area = $window_length * $window_width; // Area of the window
-$wall_area_to_paint = $room_area - ($door_area + $window_area); // Area of walls to be painted
+$panjang_jendela = 1; 
+$lebar_jendela = 1; 
 
-// Cost of purchasing the paint
-$paint_cost_per_sqm = 25000; // Cost per square meter
-$total_paint_cost = $wall_area_to_paint * $paint_cost_per_sqm; // Total cost for painting the walls
 
-echo "Area of the walls to be painted: " . $wall_area_to_paint . " sqm<br>";
-echo "Overall cost for painting the walls: IDR " . number_format($total_paint_cost, 2);
+$area_ruangan = 2 * ($panjang_ruangan + $lebar_ruangan); 
+$area_pintu = $panjang_pintu * $lebar_pintu; 
+$area_jendela = $panjang_jendela * $lebar_jendela; 
+$tembok_untuk_dicat = $area_ruangan - ($area_pintu + $area_jendela); 
+
+
+$cat_per_mtg = 25000; 
+$total_biaya = $tembok_untuk_dicat * $cat_per_mtg; 
+
+echo "Area of the walls to be painted: " . $tembok_untuk_dicat . " sqm<br>";
+echo "Overall cost for painting the walls: IDR " . number_format($total_biaya, 2);
 ?>

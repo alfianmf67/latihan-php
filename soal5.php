@@ -11,11 +11,11 @@
             padding: 5px;
             text-align: center;
         }
-        .yellow {
-            background-color: yellow;
+        .kuning {
+            background-color: kuning;
         }
-        .blue {
-            background-color: blue;
+        .biru {
+            background-color: biru;
             color: white;
         }
     </style>
@@ -23,44 +23,38 @@
 <body>
     <table>
         <tr>
-            <td class="yellow">NPM</td>
-            <td class="blue">Name</td>
-            <td class="yellow">NPM</td>
-            <td class="blue">Name</td>
-            <td class="yellow">NPM</td>
-            <td class="blue">Name</td>
+            <td class="kuning">NPM</td>
+            <td class="biru">Name</td>
+            <td class="kuning">NPM</td>
+            <td class="biru">Name</td>
+            <td class="kuning">NPM</td>
+            <td class="biru">Name</td>
         </tr>
         <?php
-        $students = array(
-            array('12345', 'John Doe'),
-            array('23456', 'Jane Smith'),
-            array('34567', 'Alice Johnson'),
-            array('45678', 'Bob Brown'),
-            array('56789', 'Sarah Lee'),
-            array('12345', 'John Doe'),
-            array('23456', 'Jane Smith'),
-            array('34567', 'Alice Johnson'),
-            array('45678', 'Bob Brown'),
-            array('56789', 'Sarah Lee'),
-            array('12345', 'John Doe'),
-            array('23456', 'Jane Smith'),
-            array('34567', 'Alice Johnson'),
-            array('45678', 'Bob Brown'),
-            array('56789', 'Sarah Lee'),
-            array('12345', 'John Doe'),
-            array('23456', 'Jane Smith'),
-            array('34567', 'Alice Johnson'),
-            array('45678', 'Bob Brown'),
-            array('56789', 'Sarah Lee')
+        $mhs = array(
+            array('12345', 'Dita karang'),
+            array('23456', 'kimberley salim'),
+            array('34567', 'joe taslim'),
+            array('45678', 'joe salim'),
+            array('56789', 'iko uwis'),
+            array('12345', 'kim minji'),
+            array('23456', 'jeane'),
+            array('34567', 'grace'),
+            array('45678', 'Bob budi'),
+            array('56789', 'Sarah'),
+            array('12345', 'sigit rendang'),
+            array('23456', 'farhan kebab'),
+            array('34567', 'andri finance'),
+            
         );
 
-        foreach ($students as $key => $student) {
+        foreach ($mhs as $key => $mhss) {
             echo "<tr>";
-            for ($i = 0; $i < count($student); $i++) {
+            for ($i = 0; $i < count($mhss); $i++) {
                 if ($i % 2 == 0) {
-                    echo "<td class='yellow'>" . $student[$i] . "</td>";
+                    echo "<td class='kuning'>" . $mhss[$i] . "</td>";
                 } else {
-                    echo "<td class='blue'>" . $student[$i] . "</td>";
+                    echo "<td class='biru'>" . $mhss[$i] . "</td>";
                 }
             }
             echo "</tr>";
