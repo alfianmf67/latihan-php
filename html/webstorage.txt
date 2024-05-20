@@ -1,0 +1,26 @@
+Penyimpanan web dalam HTML adalah fitur yang memungkinkan aplikasi web menyimpan data secara lokal di dalam browser pengguna. Ini merupakan peningkatan dibandingkan cookie karena menyediakan kapasitas penyimpanan yang lebih besar dan tidak mentransfer informasi ke server dengan setiap permintaan HTTP. Penyimpanan web memiliki dua jenis utama: penyimpanan lokal dan penyimpanan sesi.
+
+Penyimpanan lokal menyimpan data tanpa tanggal kedaluwarsa, sedangkan penyimpanan sesi hanya menyimpan data untuk satu sesi, dan data dihapus saat tab browser ditutup.
+
+
+<!DOCTYPE HTML>
+
+<html>
+   <body>
+      <script type = "text/javascript">
+         
+         if( localStorage.hits ) {
+            localStorage.hits = Number(localStorage.hits) +1;
+         } else {
+            localStorage.hits = 1;
+         }
+         document.write("Total Hits :" + localStorage.hits );
+      </script>
+		
+      <p>Refresh the page to increase number of hits.</p>
+      <p>Close the window and open it again and check the result.</p>
+
+   </body>
+</html>
+
+Dalam contoh ini, variabel penyimpanan lokal hits diatur dan diakses setiap kali halaman diakses, bahkan saat berikutnya, ketika Anda membuka jendela.

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="panjang">Panjang</label>
+        <input type="number" name="panjang" id="panjang"><br>
+        <label for="lebar">Lebar</label>
+        <input type="number" name="lebar" id="lebar"><br>
+        <input type="button" value="Hitung" onclick="hitungLuas()">
+    </form>
+    <script>
+        function hitungLuas() {
+            const panjang = document.getElementById('panjang').value
+            const lebar = document.getElementById('lebar').value
+
+            const hasil = panjang * lebar
+
+            alert('Luas: ' + hasil)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #svgelem {
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-20%);
+        -ms-transform: translateX(-20%);
+        transform: translateX(-20%);
+      }
+    </style>
+    <title>HTML5 SVG</title>
+  </head>
+  <body>
+    <h2 align="center">HTML5 SVG Circle</h2>
+    <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+      <circle id="bluecircle" cx="60" cy="60" r="120" fill="blue" />
+    </svg>
+
+    <canvas id="myCanvas" width="578" height="200">hai</canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+    </script>
+  </body>
+</html>
+
+<!-- Singkatnya, SVG adalah format grafik berbasis vektor yang tidak bergantung pada resolusi dan sering digunakan untuk logo dan ikon, sedangkan Canvas adalah format grafik berbasis raster yang sering digunakan untuk grafik dinamis, animasi, dan permainan. -->

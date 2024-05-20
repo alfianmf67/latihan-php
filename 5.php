@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>menghitung kepastian</title>
+    <title>menghitung kepas</title>
 </head>
 <body>
 
@@ -9,7 +9,7 @@
         <label for="name">Nama:</label>
         <input type="text" name="name" id="name" required><br><br>
         
-        <label for="j_aksi">Jumlah j_aksi:</label>
+        <label for="j_aksi">jumlah aksi:</label>
         <input type="number" name="j_aksi" id="j_aksi" required><br><br>
         
         <input type="radio" name="aksi" value="melangkah" checked> melangkah
@@ -36,7 +36,7 @@
             echo "$name : $aksi - $currentj_aksi x <br>";
             
             if ($currentj_aksi == $j_aksi) {
-                echo "$name berhenti $aksi karena lelah menunggu mu tanpa kabar akwokakwokakwok<br>";
+                echo "$name berhenti $aksi <br>";
                 break;
             }
         }

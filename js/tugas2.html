@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = []; // Initialize an empty array to store user input data
+
+        // Get user input using prompts
+        const namaBarang = prompt('Enter the name of the item');
+        const hargaBarang = prompt('Enter the price of the item');
+        const quantity = prompt('Enter the quantity of the item');
+
+        // Calculate subtotal
+        const subTotal = parseFloat(hargaBarang) * parseInt(quantity);
+
+        // Create an object with the user input data
+        const item = {
+            namaBarang,
+            hargaBarang,
+            quantity,
+            subTotal
+        };
+
+        // Add the item to the data array
+        data.push(item);
+
+        // Display the table with the user input data
+        const table = `
+            <table border="2">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>${item.namaBarang}</td>
+                        <td>${item.hargaBarang}</td>
+                        <td>${item.quantity}</td>
+                        <td>${item.subTotal}</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+
+        document.body.innerHTML = table; // Display the table in the body of the HTML document
+    </script>
+</body>
+</html>
